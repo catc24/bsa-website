@@ -1,8 +1,7 @@
 User-agent: Googlebot
 Disallow: /css/
-Disallow: /css/
-Disallow: /css/
-Disallow: /css/
+Disallow: /js/
+Disallow: /img/
 
 User-agent: *
 Allow: /
