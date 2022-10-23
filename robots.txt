@@ -1,0 +1,10 @@
+User-agent: Googlebot
+Disallow: /css/
+Disallow: /css/
+Disallow: /css/
+Disallow: /css/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.tctroop34.org/sitemap.xml
