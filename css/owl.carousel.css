@@ -61,11 +61,6 @@
     opacity: 0; }
   .owl-carousel.owl-refresh .owl-item {
     visibility: hidden; }
-  .owl-carousel.owl-drag .owl-item {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; }
   .owl-carousel.owl-grab {
     cursor: move;
     cursor: grab; }
@@ -96,12 +91,6 @@
 .owl-carousel .fadeOut {
   -webkit-animation-name: fadeOut;
           animation-name: fadeOut; }
-
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
 
 @keyframes fadeOut {
   0% {
