@@ -2163,7 +2163,7 @@ body {
 }
 
 .gallery > div > img {
-  width: 200px;
+  width: 350px;
   transition: .1s transform;
   transform: translateZ(0); /* hack */
 }
