@@ -2119,77 +2119,33 @@ h6 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-@import "compass/css3";
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font: 14px/1 'Open Sans', sans-serif;
-  color: #555;
-  background: #e5e5e5;
-}
-
 .gallery {
-  width: 1480px;
-  margin: 0 auto;
-  padding: 5px;
-  background: #fff;
-  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 10px;
 }
 
-.gallery > div {
-  position: relative;
-  float: left;
-  padding: 5px;
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
 }
 
-.gallery > div > img {
-  width: 350px;
-  transition: .1s transform;
-  transform: translateZ(0); /* hack */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.gallery > div:hover {
-  z-index: 1;
+.gallery-item:hover {
+    transform: scale(1.05);
 }
 
-.gallery > div:hover > img {
-  transform: scale(1.8,1.8);
-  transition: .3s transform;
-}
-
-.cf:before, .cf:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-
-.cf:after {
-  clear: both;
-}
-
-h1 {
-  margin: 40px 0;
-  font-size: 24px;
-  text-align: center;
+@media (min-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }
 
