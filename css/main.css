@@ -2118,34 +2118,70 @@ h6 {
 
 
 
+@import "compass/css3";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px/1 'Open Sans', sans-serif;
+  color: #555;
+  background: #e5e5e5;
+}
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    padding: 10px;
+  max-width: 1480px; /* Use max-width instead of fixed width for responsiveness */
+  margin: 0 auto;
+  padding: 5px;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
 }
 
-.gallery-item {
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+.gallery > div {
+  position: relative;
+  float: left;
+  padding: 5px;
 }
 
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
+.gallery > div > img {
+  width: 100%; /* Ensure images fill their containers */
+  height: auto; /* Maintain aspect ratio */
+  transition: .3s transform;
+  transform: scale(1); /* Initial scale */
 }
 
-.gallery-item:hover {
-    transform: scale(1.05);
+.gallery > div:hover {
+  z-index: 1;
 }
 
+.gallery > div:hover > img {
+  transform: scale(1.2); /* Scale on hover */
+}
+
+.cf:before, .cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
+
+h1 {
+  margin: 40px 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Media Query for Responsive Design */
 @media (min-width: 768px) {
-    .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
+  .gallery > div > img {
+    transform: scale(1.8); /* Larger scale for desktop */
+  }
 }
-
