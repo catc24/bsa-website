@@ -2120,18 +2120,32 @@ h6 {
 
 
 
+@import "compass/css3";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 .gallery {
   max-width: 1480px; /* Use max-width instead of fixed width for responsiveness */
   margin: 0 auto;
   padding: 5px;
   background: #fff;
   box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  display: flex;
+  flex-wrap: wrap; /* Ensure items wrap to next line */
+  justify-content: space-around; /* Center items with space around them */
 }
 
 .gallery > div {
   position: relative;
-  float: left;
-  padding: 5px;
+  flex: 0 0 calc(20% - 10px); /* 20% width for 5 items per row, adjust as needed */
+  margin: 5px; /* Adjust margin between items */
 }
 
 .gallery > div > img {
@@ -2150,5 +2164,30 @@ h6 {
 }
 
 .cf:before, .cf:after {
-  display: table
+  display: table;
+  content: "";
+  line-height: 0;
+}
 
+.cf:after {
+  clear: both;
+}
+
+h1 {
+  margin: 40px 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 1024px) {
+  .gallery > div {
+    flex: 0 0 calc(25% - 10px); /* 25% width for 4 items per row on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery > div {
+    flex: 0 0 calc(50% - 10px); /* 50% width for 2 items per row on mobile */
+  }
+}
