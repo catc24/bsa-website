@@ -19,7 +19,11 @@
 }
   .owl-carousel .owl-stage {
     position: relative;
-    -ms-touch-action: pan-Y; }
+    -ms-touch-action: pan-Y; 
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
   .owl-carousel .owl-stage:after {
     content: ".";
     display: block;
