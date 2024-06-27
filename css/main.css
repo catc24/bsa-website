@@ -1511,6 +1511,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .default-banner {
   margin-top: -48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 991px) {
@@ -1525,6 +1528,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1em;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .default-banner h1 span {
