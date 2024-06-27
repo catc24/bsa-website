@@ -2118,21 +2118,7 @@ h6 {
 
 
 
-@import "compass/css3";
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font: 14px/1 'Open Sans', sans-serif;
-  color: #555;
-  background: #e5e5e5;
-}
 
 .gallery {
   max-width: 1480px; /* Use max-width instead of fixed width for responsiveness */
@@ -2164,24 +2150,5 @@ body {
 }
 
 .cf:before, .cf:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
+  display: table
 
-.cf:after {
-  clear: both;
-}
-
-h1 {
-  margin: 40px 0;
-  font-size: 24px;
-  text-align: center;
-}
-
-/* Media Query for Responsive Design */
-@media (min-width: 768px) {
-  .gallery > div > img {
-    transform: scale(1.8); /* Larger scale for desktop */
-  }
-}
