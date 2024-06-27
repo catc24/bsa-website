@@ -1719,6 +1719,69 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 50px;
 }
 
+@media (max-width: 800px) {
+  .info-area .info-left {
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+}
+
+.project-area {
+  background-color: #f9f9ff;
+}
+
+.active-works-carousel .item .caption {
+  padding: 30px 40px;
+}
+
+.active-works-carousel .item .caption h6 {
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.active-works-carousel .item .caption p {
+  margin-bottom: 0;
+}
+
+.active-works-carousel .center .caption {
+  display: block;
+}
+
+.active-works-carousel .owl-dots {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  position: relative;
+}
+
+.active-works-carousel .owl-dots:after {
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 60%;
+  height: 1px;
+  background: #eeeeee;
+  z-index: -1;
+}
+
+.active-works-carousel .owl-dots .owl-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #eeeeee;
+  margin: 0 50px;
+}
+
 @media (max-width: 767px) {
   .active-works-carousel .owl-dots .owl-dot {
     margin: 0 15px;
@@ -1815,6 +1878,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
 }
+
 
 .faq-content {
   padding-left: 10%;
